@@ -1,4 +1,5 @@
 # note this encryption code was adapted for use from the code on the website: https://kentjuno.com/learning/python/encrypt-file-with-aes-in-python/?__cf_chl_managed_tk__=pmd_hlkUY4MSLokfXLP0W7X5pldoV.w7AWDdhgcb_gkkEJM-1633346584-0-gqNtZGzNAuWjcnBszROl
+# the compression code was adapted from the code shown on the website: https://towardsdatascience.com/all-the-ways-to-compress-and-archive-files-in-python-e8076ccedb4b
 from Crypto import Random
 from Crypto.Cipher import AES
 from Crypto.Hash import SHA256

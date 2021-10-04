@@ -3,7 +3,7 @@ lzc = lzma.LZMACompressor()
 
 # cat /usr/share/dict/words | sort -R | head -c 1MB > data
 filename_in = "../Testing Data Sets/2018-09-19-03_57_11_VN100.csv"
-filename_out = "compressed_data4.xz"
+filename_out = "lzma_compressed_data.xz"
 
 start = time.time()
 with open(filename_in, mode="r") as fin, open(filename_out, "wb") as fout:

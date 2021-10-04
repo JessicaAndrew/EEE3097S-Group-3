@@ -1,7 +1,7 @@
 import zlib, sys
 
 filename_in = "../Testing Data Sets/2018-09-19-03_57_11_VN100.csv"
-filename_out = "compressed_data"
+filename_out = "zlib_compressed_data"
 
 with open(filename_in, mode="rb") as fin, open(filename_out, mode="wb") as fout:
     data = fin.read()

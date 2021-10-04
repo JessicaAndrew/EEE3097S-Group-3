@@ -2,7 +2,7 @@ import bz2, os, sys, time
 # bz2 data compression method
 
 filename_in = "../Testing Data Sets/2018-09-19-03_57_11_VN100.csv"
-filename_out = "compressed_data.bz2"
+filename_out = "bz2_compressed_data.bz2"
 
 start = time.time()
 with open(filename_in, mode="rb") as fin, bz2.open(filename_out, "wb") as fout:

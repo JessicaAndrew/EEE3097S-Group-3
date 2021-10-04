@@ -4,3 +4,5 @@ This GitHub page is used to share files that are used in the EEE3097S design pro
 The different encryption algorithms used are within the Encryption folder. The different compression algorithms used are within the Compression folder.
 
 The folder called Combined has three python files in it. CompressEncrypt.py compresses and encrpyts the inputted file. DecryptDecompress.py decrypts then decompresses the file. TestLostData.py is used to first shallow and then deep check if the orignal file and the final decompressed file match.
+
+Note that the files used in the first stage of testing are in the Testing Data Sets folder.

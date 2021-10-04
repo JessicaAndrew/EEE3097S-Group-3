@@ -2,7 +2,7 @@ import os, sys, shutil, gzip, time
 # tests the gzip compression method
 
 filename_in = "../Testing Data Sets/2018-09-19-03_57_11_VN100.csv"
-filename_out = "compressed_data2.gz"
+filename_out = "gzip_compressed_data.gz"
 
 start = time.time()
 with open(filename_in, "rb") as fin, gzip.open(filename_out, "wb") as fout:

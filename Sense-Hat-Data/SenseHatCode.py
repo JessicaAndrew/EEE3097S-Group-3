@@ -441,21 +441,21 @@ if __name__ == '__main__':
   TEMP_DATA = 0.0
   u8Buf=[0,0,0]
   lps22hb=LPS22HB()
-  file = open("test1.csv",'w')
+  file = open("Temp.csv",'w')
   file.write("Time, MagX, MagY, MagZ, AccX, AccY, AccZ, GyroX, GyroY, GyroZ, Temp, Pres, Yaw, Pitch, Roll\n")
-  
-  for x in range(20):
+  start = time.time()
+  for x in range(300):
     icm20948.icm20948_Gyro_Accel_Read()
     icm20948.icm20948MagRead()
     icm20948.icm20948CalAvgValue()
     time.sleep(0.1)
     icm20948.imuAHRSupdate(MotionVal[0] * 0.0175, MotionVal[1] * 0.0175,MotionVal[2] * 0.0175,
-                MotionVal[3],MotionVal[4],MotionVal[5], 
+                MotionVal[3],MotionVal[4],MotionVal[5],
                 MotionVal[6], MotionVal[7], MotionVal[8])
     pitch = math.asin(-2 * q1 * q3 + 2 * q0* q2)* 57.3
     roll  = math.atan2(2 * q2 * q3 + 2 * q0 * q1, -2 * q1 * q1 - 2 * q2* q2 + 1)* 57.3
     yaw   = math.atan2(-2 * q1 * q2 - 2 * q0 * q3, 2 * q2 * q2 + 2 * q3 * q3 - 1) * 57.3
-    
+
     lps22hb.LPS22HB_START_ONESHOT()
     if (lps22hb._read_byte(LPS_STATUS)&0x01)==0x01:  # a new pressure data is generated
         u8Buf[0]=lps22hb._read_byte(LPS_PRESS_OUT_XL)
@@ -470,3 +470,6 @@ if __name__ == '__main__':
     file.write(str(datetime.datetime.now()) + "," + str(Mag[0]) + "," + str(Mag[1]) + "," + str(Mag[2]) + "," + str(Accel[0]) + "," + str(Accel[1]) + "," + str(Accel[2]) + "," + str(Gyro[0]) + "," + str(Gyro[1]) + "," + str(Gyro[2]) + "," + str(round(TEMP_DATA,2)) + "," + str(round(PRESS_DATA,2)) + "," + str(yaw) + "," + str(pitch) + "," + str(roll) + "\n")
 
   file.close()
+
+  stop = time.time()
+  print(stop-start)

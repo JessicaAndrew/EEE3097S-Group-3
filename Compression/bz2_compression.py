@@ -1,7 +1,7 @@
 import bz2, os, sys, time
 # bz2 data compression method
 
-filename_in = "../Testing Data Sets/2018-09-19-03_57_11_VN100.csv"
+filename_in = "../Sense-Hat-Data/2000.csv"
 filename_out = "bz2_compressed_data.bz2"
 
 start = time.time()

@@ -1,7 +1,7 @@
 import zipfile, os, time
 
 # shuf -n5 /usr/share/dict/words > words.txt
-file = "../Testing Data Sets/2018-09-19-03_57_11_VN100.csv"
+file = "../Sense-Hat-Data/2000.csv"
 archive = "zipfile_compressed_data.zip"
 #password = b"verysecret"
 

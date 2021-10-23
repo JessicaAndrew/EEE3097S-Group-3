@@ -1,8 +1,7 @@
 import lzma, os, time
 lzc = lzma.LZMACompressor()
 
-# cat /usr/share/dict/words | sort -R | head -c 1MB > data
-filename_in = "../Testing Data Sets/2018-09-19-03_57_11_VN100.csv"
+filename_in = "../Sense-Hat-Data/2000.csv"
 filename_out = "lzma_compressed_data.xz"
 
 start = time.time()

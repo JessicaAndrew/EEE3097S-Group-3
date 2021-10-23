@@ -441,14 +441,14 @@ if __name__ == '__main__':
   TEMP_DATA = 0.0
   u8Buf=[0,0,0]
   lps22hb=LPS22HB()
-  file = open("Test2.csv",'w')
+  file = open("Test1.csv",'w')
   file.write("Time, MagX, MagY, MagZ, AccX, AccY, AccZ, GyroX, GyroY, GyroZ, Temp, Pres, Yaw, Pitch, Roll\n")
   start = time.time()
   for x in range(300):
     icm20948.icm20948_Gyro_Accel_Read()
     icm20948.icm20948MagRead()
     icm20948.icm20948CalAvgValue()
-    time.sleep(0.0001)
+    time.sleep(0.1)
     icm20948.imuAHRSupdate(MotionVal[0] * 0.0175, MotionVal[1] * 0.0175,MotionVal[2] * 0.0175,
                 MotionVal[3],MotionVal[4],MotionVal[5],
                 MotionVal[6], MotionVal[7], MotionVal[8])

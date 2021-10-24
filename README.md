@@ -7,4 +7,4 @@ The folder called Combined has three python files in it. CompressEncrypt.py comp
 
 Note that the files used in the first stage of testing are in the Testing Data Sets folder.
 
-The files used in stage 2 of the project are from data from the Sense HAT pushed to csv files. These files can be seen in Sense-Hat-Data folder with the names <Number of readings taken>.csv
+The files used in stage 2 of the project are from data from the Sense HAT pushed to csv files. These files can be seen in Sense-Hat-Data folder with the names "Number of readings taken".csv
